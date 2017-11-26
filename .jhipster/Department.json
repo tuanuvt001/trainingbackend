@@ -1,0 +1,27 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "employee",
+            "otherEntityName": "employee",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "department"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "area",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20171126043123",
+    "dto": "mapstruct",
+    "service": "serviceClass",
+    "entityTableName": "department",
+    "jpaMetamodelFiltering": true,
+    "pagination": "pagination"
+}
