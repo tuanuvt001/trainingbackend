@@ -1,0 +1,14 @@
+version: '2'
+services:
+    traningbackend-app:
+        image: traningbackend
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:mysql://traningbackend-mysql:3306/traningbackend?useUnicode=true&characterEncoding=utf8&useSSL=false
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+        ports:
+            - 8080:8080
+    traningbackend-mysql:
+        extends:
+            file: mysql.yml
+            service: traningbackend-mysql
